@@ -1,0 +1,14 @@
+.col-md-1 {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+}
+
+.left-navigation-bar {
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    width: inherit;
+    border-radius: 0%;
+    background-color: #eee;
+}

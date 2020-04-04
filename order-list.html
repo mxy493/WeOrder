@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>订单管理</title>
+
+  <!-- 新 Bootstrap 核心 CSS 文件 -->
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="styles/order-list.css">
+  <link rel="stylesheet" href="styles/main-frame.css">
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <!--左侧导航栏-->
+    <div class="col-md-1">
+        <nav class="navbar navbar-default left-navigation-bar">
+            <ul id="left-nav" class="nav nav-pills nav-stacked">
+                <li role="presentation" onclick="pageSwitch(this)"><a href="data-analysis.html">数据中心</a></li>
+                <li role="presentation" onclick="pageSwitch(this)"><a href="administrator.html">管理员</a></li>
+                <li role="presentation" onclick="pageSwitch(this)"><a href="dish-category.html">类目管理</a></li>
+                <li role="presentation" onclick="pageSwitch(this)"><a href="menu.html">菜品管理</a></li>
+                <li role="presentation" class="active" onclick="pageSwitch(this)"><a href="order-list.html">订单管理</a></li>
+            </ul>
+        </nav>            
+    </div>
+
+    <!--右侧展示区域-->
+    <div class="col-md-11 right-area">
+      <div>
+          <p>全部订单</p>
+      </div>
+      <div>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                  <th>订单号</th>
+                  <th>下单时间</th>
+                  <th>用户ID</th>
+                  <th>桌号</th>
+                  <th>菜品</th>
+                  <th>订单状态</th>
+                  <th>总价</th>
+                  <th>评价</th >
+                  <th>备注</th>
+              </tr>                
+            </thead>
+            <tbody>
+              <tr>
+                <td>202003300001</td>
+                <td>20200330223030</td>
+                <td>wechat1998</td>
+                <td>9</td>
+                <td>白菜</td>
+                <td>已完成</td>
+                <td>20</td>
+                <td>Nice</td>
+                <td>已完成</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+      <!--分页-->
+      <nav aria-label="Page navigation">
+          <ul class="pagination">
+            <li>
+              <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+              <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>            
+    </div>
+  </div>
+</div>
+</body>    
+</html>

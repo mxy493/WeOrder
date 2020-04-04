@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员</title>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- 引入 ECharts 文件 -->
+    <script src="scripts/echarts.min.js"></script>
+
+    <!--自定义样式文件-->
+    <link rel="stylesheet" href="styles/administrator.css">
+    <link rel="stylesheet" href="styles/main-frame.css">
+
+    <script src="scripts/ordering-system.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!--左侧导航栏-->
+            <div class="col-md-1">
+                <nav class="navbar navbar-default left-navigation-bar">
+                    <ul id="left-nav" class="nav nav-pills nav-stacked">
+                        <li role="presentation" onclick="pageSwitch(this)"><a href="data-analysis.html">数据中心</a></li>
+                        <li role="presentation" class="active" onclick="pageSwitch(this)"><a href="administrator.html">管理员</a></li>
+                        <li role="presentation" onclick="pageSwitch(this)"><a href="dish-category.html">类目管理</a></li>
+                        <li role="presentation" onclick="pageSwitch(this)"><a href="menu.html">菜品管理</a></li>
+                        <li role="presentation" onclick="pageSwitch(this)"><a href="order-list.html">订单管理</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--右侧展示区域-->
+            <div class="col-md-11 right-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2" style="height: 100vh;">
+                            <div class="container-fluid">
+                                <div class="row" style="margin-top: 80px; margin-bottom: 80px;">
+                                    <div class="col-md-2 col-md-offset-5">
+                                        <img src="images/admin.png" alt="管理员" class="img-circle"
+                                            style="width: 80px; height: 80px;">
+                                    </div>
+                                    <div class="col-md-5"></div>
+                                </div>
+                                <div class="row admin-info">
+                                    <div class="col-md-2 col-md-offset-4">
+                                        <p class="admin-attribute">用户名</p><span style="margin-left: 10px;">:</span>
+                                    </div>
+                                    <div class="col-md-6"><p id="admin-id">admin</p></div>
+                                </div>
+                                <div class="row admin-info">
+                                    <div class="col-md-2 col-md-offset-4">
+                                        <p class="admin-attribute">密码</p><span style="margin-left: 10px;">:</span>
+                                    </div>
+                                    <div id="admin-password" class="col-md-6"><a href="#">修改密码</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

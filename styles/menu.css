@@ -1,0 +1,14 @@
+.img-dishes {
+    width: auto;
+    max-height: 50px;
+}
+
+.right-toolbar {
+    height: 100vh;
+    /* border: 10px black; */
+    justify-content: center;
+}
+
+.right-toolbar button {
+    margin: 10px;
+}

@@ -1,0 +1,44 @@
+.right-area {
+    height: 100vh;
+    padding: 0px;
+    background-color: #777;
+}
+
+.right-area-col {
+    height: 100vh;
+    padding: 0%;
+}
+
+/* .quarter {
+    padding: 10px;
+    background-color: coral;
+} */
+
+.left-up {
+    /* width: 600px;
+    height: 400px; */
+    background-color: coral;
+}
+
+.right-up {
+    /* width: 600px;
+    height: 400px; */
+    background-color: cornflowerblue;
+}
+
+.left-down {
+    /* width: 600px;
+    height: 400px; */
+    background-color: crimson;
+}
+
+.right-down {
+    /* width: 600px;
+    height: 400px; */
+    background-color: darkcyan;
+}
+
+.data-charts {
+    width: 600px;
+    height: 400px;
+}

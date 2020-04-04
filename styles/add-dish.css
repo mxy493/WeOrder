@@ -1,0 +1,12 @@
+#header-add-dish {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.form-group button {
+    width: 6em;
+}
