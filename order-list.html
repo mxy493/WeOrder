@@ -19,42 +19,28 @@
 
 <body>
 <div class="container-fluid">
-  <div class="row">
-    <!--左侧导航栏-->
-    <div class="col-md-1">
-        <nav class="navbar navbar-default left-navigation-bar">
-            <ul id="left-nav" class="nav nav-pills nav-stacked">
-                <li role="presentation" onclick="pageSwitch(this)"><a href="data-analysis.html">数据中心</a></li>
-                <li role="presentation" onclick="pageSwitch(this)"><a href="administrator.html">管理员</a></li>
-                <li role="presentation" onclick="pageSwitch(this)"><a href="dish-category.html">类目管理</a></li>
-                <li role="presentation" onclick="pageSwitch(this)"><a href="menu.html">菜品管理</a></li>
-                <li role="presentation" class="active" onclick="pageSwitch(this)"><a href="order-list.html">订单管理</a></li>
-            </ul>
-        </nav>            
-    </div>
-
-    <!--右侧展示区域-->
-    <div class="col-md-11 right-area">
-      <div>
-          <p>全部订单</p>
-      </div>
-      <div>
-          <table class="table table-hover">
+    <div class="row">
+    <div class="col-md-12">
+        <div>
+            <h1 style="text-align: center; margin: 20px; font-size: 24px; font-weight: bold;">全部订单</h1>
+        </div>
+        <div>
+            <table class="table table-hover">
             <thead>
-              <tr>
-                  <th>订单号</th>
-                  <th>下单时间</th>
-                  <th>用户ID</th>
-                  <th>桌号</th>
-                  <th>菜品</th>
-                  <th>订单状态</th>
-                  <th>总价</th>
-                  <th>评价</th >
-                  <th>备注</th>
-              </tr>                
+                <tr>
+                    <th>订单号</th>
+                    <th>下单时间</th>
+                    <th>用户ID</th>
+                    <th>桌号</th>
+                    <th>菜品</th>
+                    <th>订单状态</th>
+                    <th>总价</th>
+                    <th>评价</th >
+                    <th>备注</th>
+                </tr>                
             </thead>
             <tbody>
-              <tr>
+                <tr>
                 <td>202003300001</td>
                 <td>20200330223030</td>
                 <td>wechat1998</td>
@@ -64,18 +50,20 @@
                 <td>20</td>
                 <td>Nice</td>
                 <td>已完成</td>
-              </tr>
+                </tr>
             </tbody>
-          </table>
-      </div>
-      
-      <!--分页-->
-      <nav aria-label="Page navigation">
-          <ul class="pagination">
+            </table>
+        </div>
+    </div>
+    
+    <!--分页-->
+    <div class="col-md-12 align-center">
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
             <li>
-              <a href="#" aria-label="Previous">
+                <a href="#" aria-label="Previous">
                 <span aria-hidden="true">&laquo;</span>
-              </a>
+                </a>
             </li>
             <li><a href="#">1</a></li>
             <li><a href="#">2</a></li>
@@ -83,12 +71,13 @@
             <li><a href="#">4</a></li>
             <li><a href="#">5</a></li>
             <li>
-              <a href="#" aria-label="Next">
+                <a href="#" aria-label="Next">
                 <span aria-hidden="true">&raquo;</span>
-              </a>
+                </a>
             </li>
-          </ul>
-        </nav>            
+            </ul>
+        </nav>
+    </div>
     </div>
   </div>
 </div>

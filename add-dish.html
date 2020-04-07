@@ -23,67 +23,45 @@
 </head>
 
 <body>
-
     <div class="container-fluid">
         <div class="row">
-            <!--左侧导航栏-->
-            <div class="col-md-1">
-                <nav class="navbar navbar-default left-navigation-bar">
-                    <ul id="left-nav" class="nav nav-pills nav-stacked">
-                        <li role="presentation" onclick="pageSwitch(this)"><a href="data-analysis.html">数据中心</a></li>
-                        <li role="presentation" onclick="pageSwitch(this)"><a href="administrator.html">管理员</a></li>
-                        <li role="presentation" onclick="pageSwitch(this)"><a href="dish-category.html">类目管理</a></li>
-                        <li role="presentation" class="active" onclick="pageSwitch(this)"><a href="menu.html">菜品管理</a>
-                        </li>
-                        <li role="presentation" onclick="pageSwitch(this)"><a href="order-list.html">订单管理</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <!--右侧展示区域-->
-            <div class="col-md-11 right-area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                            <h1 id="header-add-dish">添加菜品</h1>
-                            <!-- 向哪里发送数据 -->
-                            <form class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="dishname" class="col-sm-2 col-sm-offset-1 control-label">菜名</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="dishname" placeholder="请输入菜名" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="dishcatg" class="col-sm-2 col-sm-offset-1 control-label">类别</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="dishcatg" placeholder="请输入菜类" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="setprice" class="col-sm-2 col-sm-offset-1 control-label">单价</label>
-                                    <div class="col-sm-8">
-                                        <input type="number" class="form-control" id="setprice" min="0" placeholder="设置单价" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="imgupload" class="col-sm-2 col-sm-offset-1 control-label">上传图片</label>
-                                    <div class="col-sm-8">
-                                        <input type="file" class="form-control" id="imgupload" name="img">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-1 col-sm-offset-4">
-                                        <button type="submit" class="btn btn-primary">确认添加</button>
-                                    </div>
-                                    <div class="col-sm-1 col-sm-offset-2">
-                                        <button type="submit" class="btn btn-danger">重置</button>
-                                    </div>
-                                </div>
-                            </form>
+            <div class="col-md-6 col-md-offset-3">
+                <h1 id="header-add-dish">添加菜品</h1>
+                <!-- 向哪里发送数据 -->
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="dishname" class="col-sm-2 col-sm-offset-1 control-label">菜名</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="dishname" placeholder="请输入菜名" required>
                         </div>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="dishcatg" class="col-sm-2 col-sm-offset-1 control-label">类别</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="dishcatg" placeholder="请输入菜类" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="setprice" class="col-sm-2 col-sm-offset-1 control-label">单价</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="setprice" min="0" placeholder="设置单价" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="imgupload" class="col-sm-2 col-sm-offset-1 control-label">上传图片</label>
+                        <div class="col-sm-8">
+                            <input type="file" class="form-control" id="imgupload" name="img">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-1 col-sm-offset-4">
+                            <button type="submit" class="btn btn-primary">确认添加</button>
+                        </div>
+                        <div class="col-sm-1 col-sm-offset-2">
+                            <button type="submit" class="btn btn-danger">重置</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
