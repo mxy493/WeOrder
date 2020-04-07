@@ -5,6 +5,9 @@ function statusChange(id){
     }
     var btns = document.getElementById('status-btn-group');
     var btngroup = btns.children;
+    if(id === btngroup[2]){
+        id.disabled = true;
+    }
     var cur;
     for(var i = 0, l = btngroup.length; i < l; i++){
         if(btngroup[i].className.indexOf("btn-success") >= 0){

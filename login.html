@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-		<title>微信订餐系统</title>
-		
-		<!-- 新 Bootstrap 核心 CSS 文件 -->
-		<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>	
-
-		<link rel="stylesheet" type="text/css" href="styles/login.css"/>
-		<script type="text/javascript" src="scripts/login.js"></script>
-	</head>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<title>微信订餐系统</title>
 	
-	<body>
-		<div class="box">
-			<div class="login-box">
-				<div class="login-title text-center">
-					<h1>微信订餐系统</h1>
-				</div>
-				<div class="login-content ">
-					<div class="form">
-						<form id="modifyPassword" class="form-horizontal" action="" target="_self" method="post">							
-							<!-- 用户名输入 -->
-							<div class="form-group">
-								<div class="col-md-10 col-md-offset-1">
-									<div class="input-group">
-										<span class="input-group-addon">
-											<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-										</span>
-										<input type="text" id="username" name="username" class="form-control" placeholder="用户名" required autofocus>
-									</div>
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+
+	<link rel="stylesheet" type="text/css" href="styles/login.css"/>
+	<script type="text/javascript" src="scripts/login.js"></script>
+</head>
+
+<body>
+	<div class="box">
+		<div class="login-box">
+			<div class="login-title text-center">
+				<h1>微信订餐系统</h1>
+			</div>
+			<div class="login-content">
+				<div class="form">
+					<form id="modifyPassword" class="form-horizontal" action="" target="_self" method="post">							
+						<!-- 用户名输入 -->
+						<div class="form-group">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+									</span>
+									<input type="text" id="username" name="username" class="form-control" placeholder="用户名" required autofocus>
 								</div>
 							</div>
-							
-							<!-- 密码输入 -->
-							<div class="form-group">
-								<div class="col-md-10 col-md-offset-1">
-									<div class="input-group">
-										<span class="input-group-addon">
-											<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
-										</span> 
-										<input type="password" id="password" name="password" class="form-control" placeholder="密码" required>
-									</div>
+						</div>
+						
+						<!-- 密码输入 -->
+						<div class="form-group">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+									</span> 
+									<input type="password" id="password" name="password" class="form-control" placeholder="密码" required>
 								</div>
 							</div>
-																
-							<!-- 登录重置按钮 -->
-							<div class="form-group form-actions">
-								<div class="col-xs-12 text-center">
-									<button type="submit" id="login" class="btn btn-sm btn-success" >
-										<span class="fa fa-check-circle"></span>登录
-									</button>
-									<button type="reset" id="reset" class="btn btn-sm btn-info">
-										<span class="fa fa-close"></span> 重置
-									</button>
-								</div>
+						</div>
+															
+						<!-- 登录注册按钮 -->
+						<div class="form-group form-actions">
+							<div class="col-xs-12 text-center">
+								<button type="submit" id="login" class="btn btn-sm btn-success" >
+									<span class="fa fa-check-circle"></span>登录
+								</button>
+								<button type="reset" id="reset" class="btn btn-sm btn-info">
+									<a href="register.html"><span class="fa fa-close"></span>注册</a>
+								</button>
 							</div>
-						</form>
-					</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
-	</body>
-	
+	</div>
+</body>
 </html>
