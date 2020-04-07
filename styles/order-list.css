@@ -2,3 +2,9 @@
     width: 100px;
     height: 100px;
 }
+
+.compact-button {
+    padding: 4px;
+    font-size: 12px;
+    font-family: sans-serif;
+}

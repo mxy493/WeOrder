@@ -13,6 +13,7 @@
   <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+  <script src="scripts/order-list.js"></script>
   <link rel="stylesheet" href="styles/order-list.css">
   <link rel="stylesheet" href="styles/main-frame.css">
 </head>
@@ -46,7 +47,13 @@
                 <td>wechat1998</td>
                 <td>9</td>
                 <td>白菜</td>
-                <td>已完成</td>
+                <td>
+                    <div id="status-btn-group" class="btn-group" role="group" aria-label="...">
+                        <button id="status0" type="button" class="btn btn-success compact-button" onclick="statusChange(this)">待接单</button>
+                        <button id="status1" type="button" class="btn btn-default compact-button" onclick="statusChange(this)">制作中</button>
+                        <button id="status2" type="button" class="btn btn-default compact-button" onclick="statusChange(this)">已完成</button>
+                      </div>
+                </td>
                 <td>20</td>
                 <td>Nice</td>
                 <td>已完成</td>
