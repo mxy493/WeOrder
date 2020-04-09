@@ -11,3 +11,7 @@
 .form-group label {
     color: white;
 }
+
+.prompt {
+    padding-top: 7px;
+}
