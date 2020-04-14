@@ -14,37 +14,81 @@ $(document).ready(function () {
 
     //点击提交按钮
     $("#submit_button").click(function () {
-        //检查表单是否填写规范
-        var fill = true;
-        if (admin_id.value == "" || admin_id.value == undefined || admin_id.value == null) {
-            $("#admin_id").parent().next().text("账户ID为必填项！");
-            fill = false;
+        // Sending and receiving data in JSON format using POST method
+        //
+        var xhr = new XMLHttpRequest();
+        console.log('UNSENT', xhr.readyState); // readyState 为 0
+        if (!xhr) {
+            alert('Giving up :( Cannot create an XMLHTTP instance');
+            return false;
         }
-        if (admin_name.value == "" || admin_name.value == undefined || admin_name.value == null){
-            $("#admin_name").parent().next().text("昵称为必填项！");
-            fill = false;
-        }
-        if (admin_phone.value == "" || admin_phone.value == undefined || admin_phone.value == null){
-            $("#admin_phone").parent().next().text("手机号码为必填项！");
-            fill = false;
-        }
-        if(fill == false){
-            return;
-        }
-        //已规范填写
-        else {
-            // https://stackoverflow.com/questions/24468459/sending-a-json-to-server-and-retrieving-a-json-in-return-without-jquery
-            // Sending and receiving data in JSON format using POST method
-            var xhr = new XMLHttpRequest();
-            var url = "url";
-            xhr.open("POST", url, true);
-            xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var json = JSON.parse(xhr.responseText);
-                    //console.log(json.email + ", " + json.password);
-                }
-            };
-        }
+
+        var url = "http://orderingmeal.applinzi.com/merchant/index.php/home/user/sign";
+        xhr.open("POST", url, true);
+        console.log('OPENED', xhr.readyState); // readyState 为 1
+
+        //设置数据格式
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onprogress = function () {
+            console.log('LOADING', xhr.readyState); // readyState 为 3
+        };
+        
+        xhr.onload = function () {
+            console.log('DONE', xhr.readyState); // readyState 为 4
+        };
+
+        // var data = JSON.stringify({
+        //     "admin_id": admin_id.value,
+        //     "admin_name": admin_name.value,
+        //     "admin_password": admin_password.value,
+        //     "admin_password_again": admin_password_again.value,
+        //     "admin_phone": admin_phone.value
+        // });
+        var data = {
+            "admin_id": admin_id.value,
+            "admin_name": admin_name.value,
+            "admin_password": admin_password.value,
+            "admin_password_again": admin_password_again.value,
+            "admin_phone": admin_phone.value
+        };
+
+        console.log(data);
+        xhr.send(JSON.stringify(data));
+
+        xhr.onreadystatechange = function () {
+            try{
+                console.log("状态改变，当前状态码: "+xhr.readyState);
+                switch(xhr.readyState){
+                    case 1:
+                        console.log("已调用open()方法.");
+                        break;
+                    case 2:
+                        console.log("send()方法已经被调用, 响应头和响应状态已经返回.");
+                        break;
+                    case 3:
+                        console.log("正在下载响应体.");
+                        break;
+                    case 4:
+                        console.log("传输已结束. 状态码: ", xhr.status);
+                        if (xhr.status === 200) {
+                            console.log("请求成功，XMLHttpRequest.status: 200");
+                            console.log(xhr.responseText);
+                            //将返回数据转为JSON对象
+                            try{
+                                var response = JSON.parse(xhr.responseText);
+                            }
+                            catch{
+                                console.log("接收的数据无法转为JSON对象.");
+                            }
+                        }
+                        break;
+                    default: break;
+                }                
+            }
+            catch(e){
+                alert('Caught Exception: ' + e.description);
+            }
+        };
     })
 })
