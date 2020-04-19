@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    //检查信息填写是否符合要求
     $("#admin_password_again").keyup(function () {
         var p1 = admin_password.value;
         var p2 = admin_password_again.value;
@@ -28,7 +29,7 @@ $(document).ready(function () {
         console.log('OPENED', xhr.readyState); // readyState 为 1
 
         //设置数据格式
-        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=utf-8"); 
 
         xhr.onprogress = function () {
             console.log('LOADING', xhr.readyState); // readyState 为 3
@@ -38,13 +39,6 @@ $(document).ready(function () {
             console.log('DONE', xhr.readyState); // readyState 为 4
         };
 
-        // var data = JSON.stringify({
-        //     "admin_id": admin_id.value,
-        //     "admin_name": admin_name.value,
-        //     "admin_password": admin_password.value,
-        //     "admin_password_again": admin_password_again.value,
-        //     "admin_phone": admin_phone.value
-        // });
         var data = {
             "admin_id": admin_id.value,
             "admin_name": admin_name.value,
@@ -54,7 +48,7 @@ $(document).ready(function () {
         };
 
         console.log(data);
-        xhr.send(JSON.stringify(data));
+        xhr.send($.param(data));
 
         xhr.onreadystatechange = function () {
             try{
@@ -77,6 +71,7 @@ $(document).ready(function () {
                             //将返回数据转为JSON对象
                             try{
                                 var response = JSON.parse(xhr.responseText);
+
                             }
                             catch{
                                 console.log("接收的数据无法转为JSON对象.");
@@ -91,4 +86,26 @@ $(document).ready(function () {
             }
         };
     })
+
+    //处理收到的数据
+    function processResponse(response){
+        switch(response.error_code){
+            case 0:
+                console.log("注册成功！");
+                //跳转到系统后台页面，思路：带用户ID跳转以验证用户身份
+                window.location = "index.html";
+                break;
+            case 1:
+                console.log("参数不足！");
+                break;
+            case 2:
+                console.log("密码不一致！");
+                break;
+            case 3:
+                console.log("数据插入失败！");
+                break;
+            default:
+                break;
+        }
+    }
 })
