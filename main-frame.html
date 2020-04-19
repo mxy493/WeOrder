@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeOrder</title>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="scripts/page-switch.js"></script>
+    <link rel="stylesheet" href="styles/main-frame.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!--左侧导航栏-->
+            <div class="col-md-1">
+                <nav class="navbar navbar-default left-navigation-bar">
+                    <ul id="left-nav" class="nav nav-pills nav-stacked">
+                        <li id="page-data" role="presentation" class="active" onclick="pageSwitch(this)"><a href="#">数据中心</a></li>
+                        <li id="page-admin" role="presentation" onclick="pageSwitch(this)"><a href="#">管理员</a></li>
+                        <li id="page-catg" role="presentation" onclick="pageSwitch(this)"><a href="#">类目管理</a></li>
+                        <li id="page-menu" role="presentation" onclick="pageSwitch(this)"><a href="#">菜品管理</a></li>
+                        <li id="page-order" role="presentation" onclick="pageSwitch(this)"><a href="#">订单管理</a></li>
+                    </ul>
+                </nav>            
+            </div>
+
+            <!--右侧展示区域-->
+            <div class="col-md-11 right-area" style="padding: 0px;">
+                <iframe id="main-frame" class="right-main-frame" src="data-analysis.html" frameborder="0"></iframe>
+            </div>
+        </div>        
+    </div>
+</body>
+</html>
