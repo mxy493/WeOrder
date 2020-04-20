@@ -5,10 +5,11 @@
 
 .right-toolbar {
     height: 100vh;
-    /* border: 10px black; */
-    justify-content: center;
 }
 
 .right-toolbar button {
-    margin: 10px;
+    position: relative;
+    margin-top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
