@@ -1,0 +1,37 @@
+#category_header {
+    padding: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#box {
+    position: relative;
+}
+
+table {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+table th {
+    width: 200px;
+    /* height: 40px; */
+    padding: 10px;
+    text-align: center;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+table td {
+    border: 1px solid black;
+    padding: 4px 8px 4px 4px;
+}
+
+table td button {
+    position: relative;
+    border-radius: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
