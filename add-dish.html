@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="styles/main-frame.css">
     <link rel="stylesheet" href="styles/add-dish.css">
 
-
-    <script src="scripts/layui.all.js" charset="utf-8"></script>
+    <script src="scripts/add-dish.js"></script>
 </head>
 
 <body>
@@ -48,17 +47,29 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="quantity" class="col-sm-2 col-sm-offset-1 control-label">库存</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="quantity" min="0" placeholder="设置库存" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="imgupload" class="col-sm-2 col-sm-offset-1 control-label">上传图片</label>
                         <div class="col-sm-8">
-                            <input type="file" class="form-control" id="imgupload" name="img">
+                            <input type="file" class="" id="imgupload" name="img">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="col-sm-2 col-sm-offset-1 control-label">菜品描述</label>
+                        <div class="col-sm-8">
+                            <textarea id="description" class="form-control" rows="3" maxlength="90"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-1 col-sm-offset-4">
-                            <button type="submit" class="btn btn-primary">确认添加</button>
+                            <button type="button" id="btn_add" class="btn btn-primary">确认添加</button>
                         </div>
                         <div class="col-sm-1 col-sm-offset-2">
-                            <button type="submit" class="btn btn-danger">重置</button>
+                            <button type="reset" class="btn btn-danger">重置</button>
                         </div>
                     </div>
                 </form>
