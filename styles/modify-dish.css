@@ -7,6 +7,11 @@
     letter-spacing: 4px;
 }
 
-.form-group button {
-    width: 6em;
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+form button {
+    margin: 10px;
 }
