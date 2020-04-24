@@ -10,17 +10,12 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
-    /* justify-content: center; */
 }
 
 .orderpage-btn-group {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: auto;
-}
-
-.head-button {
-
 }
 
 .compact-button {
