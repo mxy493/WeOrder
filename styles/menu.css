@@ -1,20 +1,24 @@
 #menu_header {
-    /* position: relative; */
-    padding: 15px;
+    padding: 10px;
     font-size: 28px;
     font-weight: bold;
     text-align: center;
-    /* left: 50%;
-    transform: translateX(-50%); */
 }
 
-.table-area tbody td {
+table thead th {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    /* text-align: center; */
+    background-color: lightblue;
+}
+
+table tbody td {
     vertical-align: middle !important;
 }
 
-.table-area tbody td button {
+table tbody td img,button {
     position: relative;
-    border-radius: 4px;
     left: 50%;
     transform: translateX(-50%);
 }
