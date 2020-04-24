@@ -1,3 +1,16 @@
+.avatar-area {
+    height: 30vh;
+}
+
+#avatar {
+    display: block;
+    position: relative;
+    max-width: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
 .admin-info {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -9,6 +22,18 @@
 .admin-attribute {
     display: inline-block;
     width: 4em;
+    
     text-align: justify;
     text-align-last: justify;
+}
+
+.admin-value {
+    margin-left: 10px;
+}
+
+.btn-modify {
+    position: relative;
+    margin-top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
 }
