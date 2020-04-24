@@ -31,9 +31,12 @@
     margin-left: 10px;
 }
 
-.btn-modify {
-    position: relative;
+.btns-modify {
+    display: flex;
     margin-top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
+    justify-content: center;
+}
+
+.btn-modify {
+    margin: 10px;
 }
