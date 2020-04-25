@@ -1,14 +1,16 @@
 $(document).ready(function(){
-    //点击“修改”按钮将改行菜名替换为输入框
+    //点击“修改”按钮将该行菜名替换为输入框
     $("td .btn-primary").on("click", function(){
         var ctg = $(this).parent().parent().prev();
         var str = ctg.html();
         if(str.indexOf("input") == -1){
-            ctg.html('<input type="text" placeholder="' + str + '">');
+            var text = ctg.text();
+            ctg.html('<input type="text" value="' + text + '">');
         }
         else {
             ctg.html(ctg.children().val());
             //请求服务器更改该类目名
+
         }
     })
 
@@ -16,5 +18,6 @@ $(document).ready(function(){
     $("td .btn-danger").on("click", function(){
         $(this).parents("tr").remove();
         //请求服务器删除该类目
+        
     })
 })
