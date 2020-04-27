@@ -9,15 +9,14 @@ table thead th {
     width: 200px;
     padding: 10px;
     font-size: 16px;
-    /* text-align: center; */
     background-color: lightblue;
 }
 
-table tbody td {
+tbody td {
     vertical-align: middle !important;
 }
 
-table tbody td img,button {
+tbody td img,.button {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -37,4 +36,15 @@ table tbody td img,button {
     margin-top: 20px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.modal-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+#dishid {
+    font-weight: normal;
+    margin: 0px;
+    padding-top: 7px;
 }

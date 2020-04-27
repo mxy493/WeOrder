@@ -14,7 +14,6 @@
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="styles/menu.css">
-
     <script src="scripts/menu.js"></script>
 </head>
 
@@ -40,6 +39,7 @@
                                     <th>原价</th>
                                     <th>打折</th>
                                     -->
+                                    <th>状态</th>
                                     <th>图片</th>
                                     <th>操作</th>
                                 </tr>                
@@ -52,8 +52,9 @@
                                     <td>10</td>
                                     <td>40</td>
                                     <td>美味</td>
+                                    <td>已上架</td>
                                     <td><img src="images/dishes/b.jpg" alt="白菜" class="img-dishes img-thumbnail img-responsive"></td>
-                                    <td><button type="button" class="btn btn-primary">修改</button></td>
+                                    <td><button type="button" class="btn btn-primary table-btn" data-toggle="modal" data-target="#modal_modify_dish">修改</button></td>
                                 </tr>
                                 <tr>
                                     <td>0001</td>
@@ -62,8 +63,9 @@
                                     <td>12</td>
                                     <td>30</td>
                                     <td>美味</td>
+                                    <td>已下架</td>
                                     <td><img src="images/dishes/o.jpg" alt="莲藕" class="img-dishes img-thumbnail img-responsive"></td>
-                                    <td><button type="button" class="btn btn-primary">修改</button></td>
+                                    <td><button type="button" class="btn btn-primary table-btn" data-toggle="modal" data-target="#modal_modify_dish">修改</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -73,6 +75,90 @@
             <!--右侧工具栏-->
             <div class="col-md-1 right-toolbar" style="padding: 0px;">
                 <button id="add-dish" type="button" class="btn btn-primary" onclick="window.location.href='add-dish.html'">添加菜品</button>
+            </div>
+        </div>
+    </div>
+
+    <!--修改菜品信息模态框-->
+    <div id="modal_modify_dish" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">菜品信息修改</h4>
+                </div>
+
+                <!--中间主体-->
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">菜品ID</label>
+                            <div class="col-sm-8">
+                                <label id="dishid"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dishname" class="col-sm-2 control-label">菜名</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="dishname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dishcatg" class="col-sm-2 control-label">类别</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="dishcatg">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="setprice" class="col-sm-2 control-label">单价</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control" id="setprice" min="0">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity" class="col-sm-2 control-label">库存</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control" id="quantity" min="0">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dish_status" class="col-sm-2 control-label">状态</label>
+                            <div class="col-sm-8">
+                                <!-- <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" checked>上架
+                                    </label>
+                                    <label class="btn btn-success">
+                                        <input type="radio" name="options" id="option2" autocomplete="off">下架
+                                    </label>
+                                </div> -->
+                                <div class="btn-group" role="group" aria-label="状态">
+                                    <button type="button" class="btn btn-success btn-status">上架</button>
+                                    <button type="button" class="btn btn-default btn-status">下架</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="imgupload" class="col-sm-2 control-label">上传图片</label>
+                            <div class="col-sm-8">
+                                <input type="file" class="" id="imgupload" name="img">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="col-sm-2 control-label">菜品描述</label>
+                            <div class="col-sm-8">
+                                <textarea id="description" class="form-control" rows="3" maxlength="90"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button id="dish_delete" type="button" class="btn btn-danger">删除菜品</button>
+                    <button id="dish_modify" type="button" class="btn btn-primary">确认修改</button>
+                </div>
             </div>
         </div>
     </div>
