@@ -13,6 +13,7 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <script src="scripts/xhr.js"></script>
     <script src="scripts/administrator.js"></script>
     <link rel="stylesheet" href="styles/administrator.css">
     <link rel="stylesheet" href="styles/main-frame.css">
@@ -27,8 +28,12 @@
             </div>
             <!--管理员信息-->
             <div class="col-md-3 col-md-offset-5 admin-info">
+                <span class="admin-attribute">用户ID</span><span style="margin-left: 10px;">:</span>
+                <span class="admin-value" id="id">admin</span>
+            </div>
+            <div class="col-md-3 col-md-offset-5 admin-info">
                 <span class="admin-attribute">用户名</span><span style="margin-left: 10px;">:</span>
-                <span class="admin-value" id="name">admin</span>
+                <span class="admin-value" id="name">管理大大</span>
             </div>
             <div class="col-md-3 col-md-offset-5 admin-info">
                 <span class="admin-attribute">电话</span><span style="margin-left: 10px;">:</span>
@@ -88,6 +93,11 @@
                 <div class="modal-body">
                     <form id="modify_form" enctype="multipart/form-data" method="POST" class="form-horizontal form-style">
                         <div class="form-group">
+                            <label for="modify_id" class="col-sm-2 control-label">昵称</label>
+                            <span id="modify_id" name="modify_id" class="col-sm-8"></span>
+                            <label for="modify_id" class="prompt col-sm-2"></label>
+                        </div>
+                        <div class="form-group">
                             <label for="modify_name" class="col-sm-2 control-label">昵称</label>
                             <div class="col-sm-8">
                                 <input id="modify_name" name="modify_name" type="text" class="form-control">
@@ -113,7 +123,7 @@
                             <label for="modify_oldpsw" class="col-sm-2 control-label">原密码</label>
                             <div class="col-sm-8">
                                 <input id="modify_oldpsw" name="modify_oldpsw" type="password" class="form-control"
-                                    placeholder="【必填】请输入原密码以确认身份！">
+                                    placeholder="【必填】请输入原密码以确认身份！" required>
                             </div>
                             <label for="modify_oldpsw" class="prompt col-sm-2"></label>
                         </div>
