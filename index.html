@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-	<title>微信订餐系统</title>
+	<title>WeOrder</title>
 	
 	<!-- 新 Bootstrap 核心 CSS 文件 -->
 	<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -52,12 +52,8 @@
 						<!-- 登录注册按钮 -->
 						<div class="form-group form-actions">
 							<div class="col-xs-12 text-center">
-								<button type="submit" id="login" class="btn btn-sm btn-success" >
-									<span class="fa fa-check-circle"></span>登录
-								</button>
-								<button type="reset" id="reset" class="btn btn-sm btn-info">
-									<a href="register.html"><span class="fa fa-close"></span>注册</a>
-								</button>
+								<a id="login" class="btn btn-sm btn-success" role="button" data-toggle="popover" data-trigger="focus">登录</a>
+								<button id="register" type="button" class="btn btn-sm btn-info">注册</button>
 							</div>
 						</div>
 					</form>

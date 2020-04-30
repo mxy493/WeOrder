@@ -1,4 +1,10 @@
 $(document).ready(function(){
+	//点击注册按钮
+	$("#register").click(function(){
+		window.location.href = "register.html";
+	})
+
+	//点击登录按钮
 	$("#login").click(function(event) {
 		var id = $("#admin_id").val();
 		var pwd = $("#admin_password").val();
@@ -10,29 +16,10 @@ $(document).ready(function(){
 		{
 		   alert("密码不能为空！");
 		}
-		// else if(pwd!="" && pwd.length < 6){
-		// 	alert("密码不能小于6位！");
-		// }
-		else if(id!="" && pwd !="" /*&& pwd.length >= 6*/)
+		else if(id != "" && pwd != "")
 		{
-			var response = authentication(id, pwd);
-			switch(response.error_code){
-				case 0:
-					alert("登录成功！");
-					window.location.href = "main_frame.html";
-					break;
-				case 1:
-					alert("参数不足！");
-					break;
-				case 2:
-					alert("账号不存在！");
-					break;
-				case 3:
-					alert("密码错误！");
-					break;
-				default:
-					alert("未知错误！");
-			}
+			//身份认证
+			authentication(id, pwd);
 		}
 	});
 
@@ -47,7 +34,7 @@ $(document).ready(function(){
 			return false;
 		}
 
-		var url = "http://orderingmeal.applinzi.com/merchant/index.php/home/user/degnlu";
+		var url = "http://orderingmeal.applinzi.com/merchant/index.php/home/user/denglu";
 		xhr.open("POST", url, true);
 		console.log('OPENED', xhr.readyState); // readyState 为 1
 
@@ -91,7 +78,7 @@ $(document).ready(function(){
 							//将返回数据转为JSON对象
 							try{
 								var response = JSON.parse(xhr.responseText);
-								return response;
+								processResponse(response);
 							}
 							catch{
 								console.log("接收的数据无法转为JSON对象.");
@@ -104,6 +91,42 @@ $(document).ready(function(){
 			catch(e){
 				alert('Caught Exception: ' + e.description);
 			}
+		}
+	}
+
+	//处理返回数据
+	function processResponse(response){
+		switch(response.error_code){
+			case 0:
+				window.location = "main-frame.html";
+				break;
+			case 1:
+				alert("参数不足！");
+				break;
+			case 2:
+				$("#login").popover({
+					placement: 'top',
+					title: '登陆失败',
+					content: '不存在该账号!',
+				})
+				$("#login").popover('show');
+				setTimeout(function(){
+					$("#login").popover('hide');
+				}, 2000);
+				break;
+			case 3:
+				$("#login").popover({
+					placement: 'top',
+					title: '登陆失败',
+					content: '密码错误!',
+				})
+				$("#login").popover('show');
+				setTimeout(function(){
+					$("#login").popover('hide');
+				}, 2000);
+				break;
+			default:
+				alert("未知错误！");
 		}
 	}
 });
