@@ -31,7 +31,7 @@ tbody td img,.button {
     height: 100vh;
 }
 
-.right-toolbar button {
+.right-toolbar #add_dish {
     position: relative;
     margin-top: 20px;
     left: 50%;
