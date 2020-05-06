@@ -14,8 +14,7 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script src="scripts/order-list.js"></script>
-    <link rel="stylesheet" href="styles/order-list.css">
+    <link rel="stylesheet" href="styles/orderlist.css">
     <link rel="stylesheet" href="styles/main-frame.css">
 </head>
 
@@ -38,19 +37,27 @@
                                 <th>用户ID</th>
                                 <th>桌号</th>
                                 <th>菜品</th>
-                                <th>订单状态</th>
+                                <th>备注</th>
                                 <th>总价</th>
                                 <th>评价</th>
-                                <th>备注</th>
+                                <th>订单状态</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <!-- <tr>
                                 <td>202003300001</td>
                                 <td>20200330223030</td>
                                 <td>wechat1998</td>
                                 <td>9</td>
-                                <td>白菜</td>
+                                <td>
+                                    <p>3×恩施合渣菜(￥105)</p>
+                                    <p>白菜12</p>
+                                    <p>花菜10</p>
+                                    <p>豆腐20</p>
+                                </td>
+                                <td>用户备注</td>
+                                <td>20</td>
+                                <td>Nice</td>
                                 <td>
                                     <div id="status-btn-group" class="btn-group" role="group" aria-label="...">
                                         <button id="status0" type="button" class="btn btn-success compact-button">待接单</button>
@@ -58,17 +65,14 @@
                                         <button id="status2" type="button" class="btn btn-default compact-button">已完成</button>
                                     </div>
                                 </td>
-                                <td>20</td>
-                                <td>Nice</td>
-                                <td>已完成</td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
             </div>
 
             <!--分页-->
-            <div class="col-md-12 align-center">
+            <!-- <div class="col-md-12 align-center">
                 <nav aria-label="Page navigation">
                     <ul class="pagination">
                         <li>
@@ -88,10 +92,11 @@
                         </li>
                     </ul>
                 </nav>
-            </div>
+            </div> -->
         </div>
     </div>
-    </div>
-</body>
 
+    <script src="scripts/xhr.js"></script>
+    <script src="scripts/orderlist.js"></script>
+</body>
 </html>

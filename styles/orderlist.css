@@ -23,3 +23,11 @@
     font-size: 12px;
     font-family: sans-serif;
 }
+
+tbody td {
+    vertical-align: middle !important;
+}
+
+tbody td p {
+    margin: 0px;
+}
