@@ -6,8 +6,9 @@ $(document).ready(function(){
 
 	//点击登录按钮
 	$("#login").click(function(event) {
-		var id = $("#admin_id").val();
-		var pwd = $("#admin_password").val();
+		let id = $("#admin_id").val();
+		let pwd = $("#admin_password").val().hashCode();//转哈希值
+		console.log(pwd);
 		if(id=="")
 		{
 		   alert("用户名不能为空！");
@@ -18,22 +19,26 @@ $(document).ready(function(){
 		}
 		else if(id != "" && pwd != "")
 		{
+			//存储账户信息到全局变量，xhr.js
+			localStorage.id = id;
+			localStorage.pwd = pwd;
 			//身份认证
-			var data = {
+			let url = "http://orderingmeal.applinzi.com/merchant/index.php/home/user/denglu";
+			let data = {
 				"admin_id": id,
 				"admin_password": pwd
 			};
-			XHR(data);//调用XHR函数发起请求
+			XHR(url, data);//调用XHR函数发起请求
 		}
 	});
 });	
-
 
 //处理返回数据
 function processResponse(response){
 	switch(response.error_code){
 		case 0:
-			window.location = "main-frame.html";
+			localStorage.time = new Date().getTime();//1970年1月1号至今的毫秒数
+			window.location = "mainframe.html";
 			break;
 		case 1:
 			alert("参数不足！");
