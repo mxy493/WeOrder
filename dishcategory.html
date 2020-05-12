@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类目管理</title>
+    
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles/mainframe.css">
+    <link rel="stylesheet" href="styles/dishcategory.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+    <div class="row">
+        <div id="category_header" class="col-md-12"><span>类目管理</span></div>
+        <div id="box" class="col-md-12">
+            <table>
+                <thead>
+                    <tr>
+                        <th>类目ID</th>
+                        <th>类目名</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>00</td>
+                        <td>蔬菜</td>
+                        <td>
+                            <div class="btn-box">
+                                <button type="button" class="btn btn-primary">修改</button>
+                                <button type="button" class="btn btn-danger">删除</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>肉食</td>
+                        <td>
+                            <div class="btn-box">
+                                <button type="button" class="btn btn-primary">修改</button>
+                                <button type="button" class="btn btn-danger">删除</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    
+    <script src="scripts/dishcategory.js"></script>
+</body>    
+</html>
