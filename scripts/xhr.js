@@ -1,10 +1,5 @@
-adminInfo = {
-    "id": "admin",
-    "phone": "123456"
-}
-
 //请求服务器确认登陆信息
-function XHR(data) {
+function XHR(url, data) {
     // Sending and receiving data in JSON format using POST method
     //
     var xhr = new XMLHttpRequest();
@@ -14,7 +9,6 @@ function XHR(data) {
         return false;
     }
 
-    var url = "http://orderingmeal.applinzi.com/merchant/index.php/home/user/denglu";
     xhr.open("POST", url, true);
     console.log('OPENED', xhr.readyState); // readyState 为 1
 
@@ -68,8 +62,4 @@ function XHR(data) {
             alert('Caught Exception: ' + e.description);
         }
     }
-}
-
-function getAdminInfo(){
-    return adminInfo;
 }
