@@ -12,8 +12,7 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script src="scripts/page-switch.js"></script>
-    <link rel="stylesheet" href="styles/main-frame.css">
+    <link rel="stylesheet" href="styles/mainframe.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -24,7 +23,7 @@
                     <ul id="left-nav" class="nav nav-pills nav-stacked">
                         <li id="page-data" role="presentation" class="active" onclick="pageSwitch(this)"><a href="#">数据中心</a></li>
                         <li id="page-admin" role="presentation" onclick="pageSwitch(this)"><a href="#">管理员</a></li>
-                        <li id="page-catg" role="presentation" onclick="pageSwitch(this)"><a href="#">类目管理</a></li>
+                        <!-- <li id="page-catg" role="presentation" onclick="pageSwitch(this)"><a href="#">类目管理</a></li> -->
                         <li id="page-menu" role="presentation" onclick="pageSwitch(this)"><a href="#">菜品管理</a></li>
                         <li id="page-order" role="presentation" onclick="pageSwitch(this)"><a href="#">订单管理</a></li>
                     </ul>
@@ -33,9 +32,11 @@
 
             <!--右侧展示区域-->
             <div class="col-md-11 right-area" style="padding: 0px;">
-                <iframe id="main-frame" class="right-main-frame" src="data-analysis.html" frameborder="0"></iframe>
+                <iframe id="main-frame" class="right-main-frame" src="dataanalysis.html" frameborder="0"></iframe>
             </div>
-        </div>        
+        </div>
+        
+        <script src="scripts/pageswitch.js"></script>
     </div>
 </body>
 </html>
