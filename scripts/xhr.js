@@ -24,7 +24,7 @@ function XHR(url, data) {
     };
 
     console.log(data);
-    var d = $.param(data);
+    let d = $.param(data);
     xhr.send(d);
 
     xhr.onreadystatechange = function () {

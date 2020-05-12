@@ -5,7 +5,7 @@ function isTimeOut(){
     //超过1分钟
     if(time_spent > 60000){
         //超时则跳转到登陆页面
-        window.location.replace("index.html");
+        window.parent.location.replace("index.html");
         return true;
     }
     else {
