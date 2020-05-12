@@ -1,10 +1,9 @@
-var LASTORDER = -1;
-
 $(document).ready(function(){
+    localStorage.LASTORDER = -1;
     //页面加载完毕获取一次订单
     getOrder();
     //订单刷新
-    setTimeout('getOrder()', 30000);//30s刷新一次
+    setInterval('getOrder()', 30000);//30s刷新一次
 
     //实时订单和历史订单切换
     $(".head-button").on("click", function(){
@@ -14,21 +13,21 @@ $(document).ready(function(){
 
     //订单状态切换
     $("tbody").on("click", "#status-btn-group button", function(){
-        //当且仅当前一个按钮为选中样式时点击才有效
-        let str = new String($(this).prev().attr("class"));
-        if(str.indexOf("success") != -1){
-            $(this).prev().attr("class", "btn btn-default compact-button");
-            $(this).prev().addClass("disabled");
-            $(this).attr("class", "btn btn-success compact-button");
-
-            let url = "http://lcalhost/merchant/index.php/home/view/ChangeOrderSta";
-            let id = $(this).parent().parent().parent().children()[2].innerText();
-            let data = {
-                "order_id": id
+        //没有超时
+        if(!isTimeOut()){
+            //当且仅当前一个按钮为选中样式时点击才有效
+            let str = new String($(this).prev().attr("class"));
+            if(str.indexOf("success") != -1){
+                let url = "http://orderingmeal.applinzi.com/merchant/index.php/home/view/ChangeOrderSta";
+                let id = $(this).parent().parent().parent().children().first()[0].innerText;
+                let data = {
+                    "order_id": id,
+                    "step": $(this)[0].innerText
+                }
+                XHR(url, data);
             }
-            XHR(url, data);
+            else return;
         }
-        else return;
     })
 })
 
@@ -36,7 +35,7 @@ $(document).ready(function(){
 function getOrder(){
     let url = "http://orderingmeal.applinzi.com/merchant/index.php/home/view/GetOrder";
     let data = {
-        "order_id": LASTORDER
+        "order_id": localStorage.LASTORDER
     };
     XHR(url, data);
 }
@@ -47,7 +46,7 @@ function processResponse(response){
     if(response.function == "HistoryOrder" && response.request_behave == "select"){
         if(response.error_code == 0){
             //请求成功
-            LASTORDER = response.data.end;//更新最后的订单ID
+            localStorage.LASTORDER = response.data.end;//更新最后的订单ID
             let orders = response.data.order;
             for(let i = 0; i < orders.length; i++){
                 $("tbody").prepend("<tr></tr>");
@@ -99,8 +98,28 @@ function processResponse(response){
     }
 
     //这是订单状态切换的请求
-    if(response.function == "" && response.request_behave == ""){
-
+    if(response.function == "ChangeOrderSta" && response.request_behave == "alert"){
+        if(response.error_code == 0){
+            //状态修改成功
+            //不重新加载页面，手动修改订单状态
+            let rows = $("tbody").children();
+            for(let i = 0; i < rows.length; i++){
+                if($(rows[i]).children()[0].innerText == response.data.order_id){
+                    let btng = $(rows[i]).children()[8];
+                    let btns = $(btng).find("button");
+                    for(let j = 0; j < btns.length; j++) {
+                        if(btns[j].innerText == response.data.order_staus){
+                            $(btns[j]).prev().attr("class", "btn btn-default compact-button");
+                            $(btns[j]).prev().addClass("disabled");
+                            $(btns[j]).attr("class", "btn btn-success compact-button");
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        else {
+            alert("修改失败！");
+        }
     }
-
 }
