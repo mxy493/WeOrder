@@ -38,6 +38,7 @@ function processResponse(response){
 	switch(response.error_code){
 		case 0:
 			localStorage.time = new Date().getTime();//1970年1月1号至今的毫秒数
+			localStorage.online = "true";//已登录状态
 			window.location = "mainframe.html";
 			break;
 		case 1:

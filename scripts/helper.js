@@ -2,9 +2,10 @@
 function isTimeOut(){
     let time_spent = new Date().getTime();
     time_spent -= localStorage.time;
-    //超过1分钟
-    if(time_spent > 60000){
+    //超过10分钟
+    if(time_spent > 600000){
         //超时则跳转到登陆页面
+        localStorage.online = false;//退出登录
         window.parent.location.replace("index.html");
         return true;
     }

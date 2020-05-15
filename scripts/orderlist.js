@@ -1,4 +1,9 @@
 $(document).ready(function(){
+    //非正常登录
+    if(localStorage.online == "false" || localStorage.online == undefined) {
+        window.parent.location.replace("index.html");
+    }
+
     localStorage.LASTORDER = -1;
     //页面加载完毕获取一次订单
     getOrder();

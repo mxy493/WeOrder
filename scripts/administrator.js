@@ -1,9 +1,15 @@
 $(document).ready(function(){
+    //非正常登录
+    if(localStorage.online == "false" || localStorage.online == undefined) {
+        window.parent.location.replace("index.html");
+    }
+
     getAdminInfo();//获取管理员信息
 
     //退出登录
     $("#btn_signout").on("click", function() {
         localStorage.time = 0;
+        localStorage.online = false;
         window.parent.location.replace("index.html");
     })
 

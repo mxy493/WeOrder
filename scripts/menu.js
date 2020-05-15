@@ -1,4 +1,9 @@
 $(document).ready(function(){
+    //非正常登录
+    if(localStorage.online == "false" || localStorage.online == undefined) {
+        window.parent.location.replace("index.html");
+    }
+    
     //页面加载时就获取一次菜单
     getMenu();
 
@@ -56,10 +61,8 @@ $(document).ready(function(){
 
     //点击菜品状态切换按钮
     $(".btn-status").click(function(){
-        if(!isTimeOut()) {
-            $(this).attr("class", "btn btn-success btn-status");
-            $(this).siblings().attr("class", "btn btn-default btn-status");            
-        }
+        $(this).attr("class", "btn btn-success btn-status");
+        $(this).siblings().attr("class", "btn btn-default btn-status");            
     })
 
     //删除菜品
