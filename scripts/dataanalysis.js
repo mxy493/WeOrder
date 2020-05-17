@@ -4,4 +4,4 @@ $(document).ready(function(){
         window.parent.location.replace("index.html");
     }
     console.log(window.getAdminInfo);
-})
+});

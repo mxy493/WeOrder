@@ -2,7 +2,7 @@ $(document).ready(function(){
 	//点击注册按钮
 	$("#register").click(function(){
 		window.location.href = "register.html";
-	})
+	});
 
 	//点击登录按钮
 	$("#login").click(function(event) {
@@ -49,7 +49,7 @@ function processResponse(response){
 				placement: 'top',
 				title: '登陆失败',
 				content: '不存在该账号!',
-			})
+			});
 			$("#login").popover('show');
 			setTimeout(function(){
 				$("#login").popover('hide');
@@ -60,7 +60,7 @@ function processResponse(response){
 				placement: 'top',
 				title: '登陆失败',
 				content: '密码错误!',
-			})
+			});
 			$("#login").popover('show');
 			setTimeout(function(){
 				$("#login").popover('hide');

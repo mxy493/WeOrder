@@ -13,7 +13,7 @@ $(document).ready(function () {
             };
             XHR(url, data);
         }
-    })
+    });
 
     //检查信息是否符合要求
     function checkInfo(){
@@ -55,8 +55,8 @@ $(document).ready(function () {
             $("#admin_password_again").parent().next().text("密码不一致！");
             // $("#submit_button").attr({ "disabled": "true" });
         }
-    })
-})
+    });
+});
 
 //处理收到的数据
 function processResponse(response){
@@ -70,7 +70,7 @@ function processResponse(response){
                 title: '注册成功',
                 content: '随后将跳转到登陆页面!',
                 triger: 'click'
-            })
+            });
             $("#submit_button").popover('show');
             //延迟2秒跳转到添加菜品页面
             setTimeout(function() { 

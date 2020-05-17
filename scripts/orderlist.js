@@ -8,13 +8,15 @@ $(document).ready(function(){
     //页面加载完毕获取一次订单
     getOrder();
     //订单刷新
-    setInterval('getOrder()', 30000);//30s刷新一次
+    setInterval(function() {
+        getOrder();
+    }, 30000);//30s刷新一次
 
     //实时订单和历史订单切换
     $(".head-button").on("click", function(){
         $(this).siblings().attr("class", "btn btn-default head-button");
         $(this).attr("class", "btn btn-success head-button");
-    })
+    });
 
     //订单状态切换
     $("tbody").on("click", "#status-btn-group button", function(){
@@ -28,13 +30,13 @@ $(document).ready(function(){
                 let data = {
                     "order_id": id,
                     "step": $(this)[0].innerText
-                }
+                };
                 XHR(url, data);
             }
             else return;
         }
-    })
-})
+    });
+});
 
 //获取订单列表
 function getOrder(){

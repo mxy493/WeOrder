@@ -12,7 +12,7 @@ function pageSwitch(id){
             if(group[i] !== id) group[i].removeAttribute('class');
         }
         var frame = document.getElementById('main-frame');
-        var idname = id.attributes["id"].value;
+        var idname = id.attributes.id.value;
         switch(idname){
             case 'page-data':
                 frame.setAttribute("src", "dataanalysis.html");

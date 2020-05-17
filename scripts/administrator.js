@@ -11,7 +11,7 @@ $(document).ready(function(){
         localStorage.time = 0;
         localStorage.online = false;
         window.parent.location.replace("index.html");
-    })
+    });
 
     //修改信息模态框
     $("#modal_modify").on("show.bs.modal", function(){
@@ -21,7 +21,7 @@ $(document).ready(function(){
         $("#modify_phone").val(phone);
         let av = $("#avatar").attr("src");
         $("#modify_avatar").val(av);
-    })
+    });
 
     //修改账户信息
     $("#btn_modify").on("click", function(){
@@ -54,8 +54,8 @@ $(document).ready(function(){
             //关闭模态框
             $("#modal_modify").modal('hide');
         }
-    })
-})
+    });
+});
 
 //获取管理员信息
 function getAdminInfo(){
@@ -63,7 +63,7 @@ function getAdminInfo(){
     let data = {
         "admin_id": localStorage.id,
         "admin_password": localStorage.pwd
-    }
+    };
     XHR(url, data);
 }
 
