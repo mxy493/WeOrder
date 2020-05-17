@@ -24,10 +24,23 @@
     font-family: sans-serif;
 }
 
-tbody td {
+table thead th {
+    font-size: 16px;
+    background-color: #b2ebf2;
+}
+
+table thead th:nth-child(5),th:last-child {
+    text-align: center;
+}
+
+table tbody td {
     vertical-align: middle !important;
 }
 
-tbody td p {
+table tbody td:last-child {
+    text-align: center;
+}
+
+table tbody td p {
     margin: 0px;
 }
