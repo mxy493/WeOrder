@@ -35,7 +35,7 @@ $(document).ready(function(){
             }
             $("#imgupload").val(info[7].children[0].src);//图片            
         }
-    })
+    });
 
     //点击添加菜品按钮，弹出添加菜品模态框
     $("body").on("click", "#add_dish", function(){
@@ -57,13 +57,13 @@ $(document).ready(function(){
             $("#imgupload").val("");//图片
             $("#description").val("");//描述            
         }
-    })
+    });
 
     //点击菜品状态切换按钮
     $(".btn-status").click(function(){
         $(this).attr("class", "btn btn-success btn-status");
         $(this).siblings().attr("class", "btn btn-default btn-status");            
-    })
+    });
 
     //删除菜品
     $("#dish_delete").click(function(){
@@ -72,10 +72,10 @@ $(document).ready(function(){
             var url = "http://orderingmeal.applinzi.com/merchant/index.php/home/view/DeleteMenu";
             var data = {
                 "pro_id": $("#dishid").text()
-            }
+            };
             XHR(url, data);
         }
-    })
+    });
 
     //添加菜品或修改菜品信息
     $("#dish_modify").click(function(){
@@ -100,11 +100,11 @@ $(document).ready(function(){
                 "image_url": $("#imgupload").val(),
                 "display": status,
                 "code": op
-            }
+            };
             XHR(url, data);
         }
-    })
-})
+    });
+});
 
 //获取菜单
 function getMenu(info){
@@ -132,7 +132,7 @@ function processResponse(response){
                 new_line.append("<td>" + dishes[i].pro_price + "</td>");
                 new_line.append("<td>" + dishes[i].pro_quantity + "</td>");
                 new_line.append("<td>" + dishes[i].pro_items + "</td>");
-                new_line.append("<td>" + status + "</td>");//菜品状态dish.pro_status
+                new_line.append('<td><img src="images/' + (status == "已上架"? "on" : "off") + '.png" alt="' + status + '"></td>');//菜品状态dish.pro_status
                 new_line.append('<td><img src="' + dishes[i].image_url + '" alt="' + dishes[i].pro_name + '" class="img-dishes img-thumbnail img-responsive"></td>');
                 new_line.append('<td><button type="button" class="btn btn-primary table-btn" data-toggle="modal" data-target="#modal_dish">修改</button></td>');
             }

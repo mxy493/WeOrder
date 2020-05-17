@@ -10,7 +10,8 @@ table thead th {
     background-color: #b2ebf2;
 }
 
-table thead tr th:nth-child(6),th:last-child,th:nth-last-child(2) {
+table thead tr th:nth-child(6),th:last-child,
+th:nth-last-child(2),th:nth-last-child(3) {
     text-align: center;
 }
 
@@ -26,6 +27,11 @@ table tbody td img,.button {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+
+table tbody td:nth-child(7) img {
+    width: 18px;
+    height: 18px;
 }
 
 .img-dishes {
