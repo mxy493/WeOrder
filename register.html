@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <title>注册</title>
+    <!-- 地址栏小图标 -->
+    <link rel="Shortcut Icon" href="images/logo.webp" type="image/x-icon" />
+    <!-- 收藏栏小图标 -->
+    <link rel="Bookmark" href="images/logo.webp" type="image/x-icon" />
 
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
@@ -13,17 +17,20 @@
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
 
-    <link rel="stylesheet" href="styles/register.css"></link>
+    <link rel="stylesheet" href="styles/register.css">
+    </link>
 </head>
+
 <body>
     <div class="reg-container">
         <div class="container-fluid" style="width: 40vw; margin: 0px; padding: 0px;">
             <div class="row" style="margin: 0px;">
                 <div class="col-md-12">
-                    <form id="registration_form" name="registration_form" enctype="multipart/form-data" method="POST" class="form-horizontal form-style">
+                    <form id="registration_form" name="registration_form" enctype="multipart/form-data" method="POST"
+                        class="form-horizontal form-style">
                         <div class="form-group">
                             <label for="admin_id" class="col-sm-2 control-label">账户ID</label>
                             <div class="col-sm-7">
@@ -66,8 +73,8 @@
                         </div>
                         <div class="form-group">
                             <div>
-                                <a id="submit_button" tabindex="0" class="btn btn-primary col-sm-offset-4 col-sm-3" role="button"
-                                    data-toggle="popover" data-trigger="focus">注册</a>
+                                <a id="submit_button" tabindex="0" class="btn btn-primary col-sm-offset-4 col-sm-3"
+                                    role="button" data-toggle="popover" data-trigger="focus">注册</a>
                             </div>
                         </div>
                     </form>
@@ -79,4 +86,5 @@
     <script src="scripts/xhr.js"></script>
     <script src="scripts/register.js"></script>
 </body>
+
 </html>

@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>数据中心</title>
+    <!-- 地址栏小图标 -->
+    <link rel="Shortcut Icon" href="images/logo.webp" type="image/x-icon" />
+    <!-- 收藏栏小图标 -->
+    <link rel="Bookmark" href="images/logo.webp" type="image/x-icon" />
 
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
@@ -18,88 +23,90 @@
     <link rel="stylesheet" href="styles/dataanalysis.css">
     <link rel="stylesheet" href="styles/mainframe.css">
 </head>
+
 <body>
     <div class="container-fluid" style="padding: 0px;">
-    <div class="row" style="height: 50%; margin: 0px;">
-        <div class="col-md-6 quarter left-up">
-            left-up
-            <!--日收入折线图-->
-            <div>
-                <div id="daily-income" class="data-charts"></div>
-                <script type="text/javascript">
-                    // 基于准备好的dom，初始化echarts实例
-                    var myChart = echarts.init(document.getElementById('daily-income'));
-            
-                    // 指定图表的配置项和数据
-                    var option = {
-                        title: {
-                            text: '日收入'
-                        },
-                        tooltip: {},
-                        legend: {
-                            data:['收入']
-                        },
-                        xAxis: {
-                            data: ["3.21","3.22","3.23","3.24","3.25","3.26","3.27"]
-                        },
-                        yAxis: {},
-                        series: [{
-                            name: '日收入',
-                            type: 'line',
-                            data: [100, 200, 360, 240, 150, 280, 220],
-                        }]
-                    };
-                    // 使用刚指定的配置项和数据显示图表。
-                    myChart.setOption(option);
-                </script>
+        <div class="row" style="height: 50%; margin: 0px;">
+            <div class="col-md-6 quarter left-up">
+                left-up
+                <!--日收入折线图-->
+                <div>
+                    <div id="daily-income" class="data-charts"></div>
+                    <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('daily-income'));
+
+                        // 指定图表的配置项和数据
+                        var option = {
+                            title: {
+                                text: '日收入'
+                            },
+                            tooltip: {},
+                            legend: {
+                                data: ['收入']
+                            },
+                            xAxis: {
+                                data: ["3.21", "3.22", "3.23", "3.24", "3.25", "3.26", "3.27"]
+                            },
+                            yAxis: {},
+                            series: [{
+                                name: '日收入',
+                                type: 'line',
+                                data: [100, 200, 360, 240, 150, 280, 220],
+                            }]
+                        };
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                    </script>
+                </div>
+            </div>
+            <div class="col-md-6 quarter right-up">
+                right-up
+                <!--销量条形统计-->
+                <div>
+                    <div id="daily-sales" class="data-charts"></div>
+                    <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('daily-sales'));
+
+                        // 指定图表的配置项和数据
+                        var option = {
+                            title: {
+                                text: '日销量'
+                            },
+                            tooltip: {},
+                            legend: {
+                                data: ['销量']
+                            },
+                            xAxis: {
+                                data: ["白菜", "萝卜", "莲藕", "牛肉", "猪肉", "莴苣", "生菜"]
+                            },
+                            yAxis: {},
+                            series: [{
+                                name: '日销量',
+                                type: 'bar',
+                                data: [10, 20, 30, 24, 15, 28, 22],
+                            }]
+                        };
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                    </script>
+                </div>
             </div>
         </div>
-        <div class="col-md-6 quarter right-up">
-            right-up
-            <!--销量条形统计-->
-            <div>
-                <div id="daily-sales" class="data-charts"></div>
-                <script type="text/javascript">
-                    // 基于准备好的dom，初始化echarts实例
-                    var myChart = echarts.init(document.getElementById('daily-sales'));
-            
-                    // 指定图表的配置项和数据
-                    var option = {
-                        title: {
-                            text: '日销量'
-                        },
-                        tooltip: {},
-                        legend: {
-                            data:['销量']
-                        },
-                        xAxis: {
-                            data: ["白菜","萝卜","莲藕","牛肉","猪肉","莴苣","生菜"]
-                        },
-                        yAxis: {},
-                        series: [{
-                            name: '日销量',
-                            type: 'bar',
-                            data: [10, 20, 30, 24, 15, 28, 22],
-                        }]
-                    };
-                    // 使用刚指定的配置项和数据显示图表。
-                    myChart.setOption(option);
-                </script>
+        <div class="row" style="height: 50%; margin: 0px;">
+            <div class="col-md-6 quarter left-down">
+                left-down
+            </div>
+            <div class="col-md-6 quarter right-down">
+                right-down
             </div>
         </div>
-    </div>
-    <div class="row" style="height: 50%; margin: 0px;">
-        <div class="col-md-6 quarter left-down">
-            left-down
-        </div>
-        <div class="col-md-6 quarter right-down">
-            right-down
-        </div>
-    </div>
     </div>
 
     <script src="scripts/xhr.js"></script>
     <script src="scripts/helper.js"></script>
     <script src="scripts/dataanalysis.js"></script>
 </body>
+
 </html>

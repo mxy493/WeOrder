@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>管理员</title>
+    <!-- 地址栏小图标 -->
+    <link rel="Shortcut Icon" href="images/logo.webp" type="image/x-icon" />
+    <!-- 收藏栏小图标 -->
+    <link rel="Bookmark" href="images/logo.webp" type="image/x-icon" />
 
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +45,8 @@
                 <div class="btns-modify">
                     <!-- <button class="btn btn-danger btn-modify" type="button" data-toggle="modal" data-target="#modal_logout">注销账户</button> -->
                     <button id="btn_signout" class="btn btn-danger btn-modify" type="button">退出登录</button>
-                    <button class="btn btn-primary btn-modify" type="button" data-toggle="modal" data-target="#modal_modify">修改信息</button>
+                    <button class="btn btn-primary btn-modify" type="button" data-toggle="modal"
+                        data-target="#modal_modify">修改信息</button>
                 </div>
             </div>
         </div>
@@ -85,7 +90,8 @@
 
                 <!--中间主体-->
                 <div class="modal-body">
-                    <form id="modify_form" enctype="multipart/form-data" method="POST" class="form-horizontal form-style">
+                    <form id="modify_form" enctype="multipart/form-data" method="POST"
+                        class="form-horizontal form-style">
                         <div class="form-group">
                             <label for="modify_id" class="col-sm-2 control-label">账号</label>
                             <span id="modify_id" name="modify_id" class="col-sm-8"></span>
@@ -136,4 +142,5 @@
     <script src="scripts/helper.js"></script>
     <script src="scripts/administrator.js"></script>
 </body>
+
 </html>

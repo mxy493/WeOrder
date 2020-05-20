@@ -103,12 +103,12 @@ label
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 20px 10px;
-    background-color: rgba(0, 189, 170, 0.6);
+    background-color: rgba(3, 219, 108, 0.6);
 }
 
 .login-title h1 {
     font-size: 28px;
-    font-weight: bold;
+    font-weight: bolder;
     letter-spacing: 0.2em;
     color: white;
     margin-top: 10px !important;

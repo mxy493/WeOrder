@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 	<title>WeOrder</title>
-	
+	<!-- 地址栏小图标 -->
+	<link rel="Shortcut Icon" href="images/logo.webp" type="image/x-icon" />
+	<!-- 收藏栏小图标 -->
+	<link rel="Bookmark" href="images/logo.webp" type="image/x-icon" />
+
 	<!-- 新 Bootstrap 核心 CSS 文件 -->
 	<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="styles/login.css"/>
+	<link rel="stylesheet" type="text/css" href="styles/login.css" />
 </head>
 
 <body>
@@ -23,7 +28,7 @@
 			</div>
 			<div class="login-content">
 				<div class="form">
-					<form id="modifyPassword" class="form-horizontal" action="" target="_self" method="post">							
+					<form id="modifyPassword" class="form-horizontal" action="" target="_self" method="post">
 						<!-- 用户名输入 -->
 						<div class="form-group">
 							<div class="col-md-10 col-md-offset-1">
@@ -31,27 +36,30 @@
 									<span class="input-group-addon">
 										<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 									</span>
-									<input type="text" id="admin_id" name="admin_id" class="form-control" placeholder="账号" required autofocus>
+									<input type="text" id="admin_id" name="admin_id" class="form-control"
+										placeholder="账号" required autofocus>
 								</div>
 							</div>
 						</div>
-						
+
 						<!-- 密码输入 -->
 						<div class="form-group">
 							<div class="col-md-10 col-md-offset-1">
 								<div class="input-group">
 									<span class="input-group-addon">
 										<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
-									</span> 
-									<input type="password" id="admin_password" name="admin_password" class="form-control" placeholder="密码" required>
+									</span>
+									<input type="password" id="admin_password" name="admin_password"
+										class="form-control" placeholder="密码" required>
 								</div>
 							</div>
 						</div>
-															
+
 						<!-- 登录注册按钮 -->
 						<div class="form-group form-actions">
 							<div class="col-xs-12 text-center">
-								<a id="login" class="btn btn-sm btn-success" role="button" data-toggle="popover" data-trigger="focus">登录</a>
+								<a id="login" class="btn btn-sm btn-success" role="button" data-toggle="popover"
+									data-trigger="focus">登录</a>
 								<button id="register" type="button" class="btn btn-sm btn-info">注册</button>
 							</div>
 						</div>
@@ -60,9 +68,10 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<script type="text/javascript" src="scripts/xhr.js"></script>
-	<script type="text/javascript" src="scripts/helper.js"></script>	
+	<script type="text/javascript" src="scripts/helper.js"></script>
 	<script type="text/javascript" src="scripts/login.js"></script>
 </body>
+
 </html>
