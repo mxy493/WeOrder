@@ -1,33 +1,50 @@
-
-.form{background: rgba(255,255,255,0.2);width:400px;margin:120px auto;}
-/*阴影*/
-.fa{display: inline-block;top: 27px;left: 6px;position: relative;color: #ccc;}
-input[type="text"],input[type="password"]{padding-left:26px;}
-.checkbox{padding-left:21px;}
-
-label
-{
-    float: left;
-    width:400px;
-    height: auto;
-    background: rgba(255,255,255,0.2);
-    margin:5px auto;
-    color:white;
+.form {
+    background: rgba(255, 255, 255, 0.2);
+    width: 400px;
+    margin: 120px auto;
 }
-.form-title
-{
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  -webkit-font-smoothing: antialiased;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -moz-osx-font-smoothing: grayscale;
-} 
 
- html, body {
+/*阴影*/
+.fa {
+    display: inline-block;
+    top: 27px;
+    left: 6px;
+    position: relative;
+    color: #ccc;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding-left: 26px;
+}
+
+.checkbox {
+    padding-left: 21px;
+}
+
+label {
+    float: left;
+    width: 400px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 5px auto;
+    color: white;
+}
+
+.form-title {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
     height: 100%;
 }
 
@@ -95,15 +112,17 @@ label
 .form-group {
     margin-bottom: 0px !important;
 }
-.radio-group{
-    margin-top:10px;
-    margin-left:45px;
+
+.radio-group {
+    margin-top: 10px;
+    margin-left: 45px;
 }
+
 .login-title {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 20px 10px;
-    background-color: rgba(3, 219, 108, 0.6);
+    background-color: rgba(47, 189, 176, .7);
 }
 
 .login-title h1 {
@@ -136,7 +155,9 @@ label
     font-weight: bold;
     font: 14px/normal "microsoft yahei", "Times New Roman", "宋体", Times, serif;
 }
-#login,#reset{
-    margin-left:10px;
-    margin-right:10px;
+
+#login,
+#reset {
+    margin-left: 10px;
+    margin-right: 10px;
 }
