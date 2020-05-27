@@ -29,9 +29,11 @@ table tbody td img,.button {
     transform: translateX(-50%);
 }
 
-table tbody td:nth-child(7) img {
-    width: 18px;
-    height: 18px;
+table tbody td:nth-child(7) i {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
 }
 
 .img-dishes {

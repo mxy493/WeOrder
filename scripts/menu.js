@@ -132,7 +132,7 @@ function processResponse(response){
                 new_line.append("<td>" + dishes[i].pro_price + "</td>");
                 new_line.append("<td>" + dishes[i].pro_quantity + "</td>");
                 new_line.append("<td>" + dishes[i].pro_items + "</td>");
-                new_line.append('<td><img src="images/' + (status == "已上架"? "on" : "off") + '.png" alt="' + status + '"></td>');//菜品状态dish.pro_status
+                new_line.append('<td><i class="fas fa-circle" style="color: ' + (status == "已上架"? "Lime" : "DimGray") + ';"></i></td>');//菜品状态dish.pro_status
                 new_line.append('<td><img src="' + dishes[i].image_url + '" alt="' + dishes[i].pro_name + '" class="img-dishes img-thumbnail img-responsive"></td>');
                 new_line.append('<td><button type="button" class="btn btn-primary table-btn" data-toggle="modal" data-target="#modal_dish">修改</button></td>');
             }
