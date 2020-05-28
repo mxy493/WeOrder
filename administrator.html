@@ -10,44 +10,50 @@
     <!-- 收藏栏小图标 -->
     <link rel="Bookmark" href="images/logo.webp" type="image/x-icon" />
 
-    <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <!-- 自定义JS文件 -->
+    <script src="scripts/xhr.js"></script>
+    <script src="scripts/helper.js"></script>
+    <script src="scripts/administrator.js"></script>
+
+    <!-- 自定义样式文件 -->
     <link rel="stylesheet" href="styles/administrator.css">
     <link rel="stylesheet" href="styles/mainframe.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <!--头像部分-->
-            <div class="col-md-12 avatar-area">
-                <img id="avatar" src="images/admin.png" alt="管理员" class="img-circle">
-            </div>
-            <!--管理员信息-->
-            <div class="col-md-3 col-md-offset-5 admin-info">
+    <div class="main-area">
+        <!--头像部分-->
+        <div class="avatar-area">
+            <img id="avatar" src="images/admin.png" alt="管理员" class="img-circle">
+        </div>
+
+        <!--管理员信息-->
+        <div class="">
+            <div class="admin-info">
                 <span class="admin-attribute">用户ID</span><span style="margin-left: 10px;">:</span>
                 <span class="admin-value" id="id">admin</span>
             </div>
-            <div class="col-md-3 col-md-offset-5 admin-info">
+            <div class="admin-info">
                 <span class="admin-attribute">电话</span><span style="margin-left: 10px;">:</span>
                 <span class="admin-value" id="phone">123456</span>
             </div>
-            <div class="col-md-3 col-md-offset-5 admin-info">
+            <div class="admin-info">
                 <span class="admin-attribute">密码</span><span style="margin-left: 10px;">:</span>
                 <span class="admin-value" id="password">********</span>
             </div>
-            <div class="col-md-12">
-                <div class="btns-modify">
-                    <!-- <button class="btn btn-danger btn-modify" type="button" data-toggle="modal" data-target="#modal_logout">注销账户</button> -->
-                    <button id="btn_signout" class="btn btn-danger btn-modify" type="button">退出登录</button>
-                    <button class="btn btn-primary btn-modify" type="button" data-toggle="modal"
-                        data-target="#modal_modify">修改信息</button>
-                </div>
+        </div>
+
+        <!-- 按钮 -->
+        <div class="">
+            <div class="btns-modify">
+                <!-- <button class="btn btn-danger btn-modify" type="button" data-toggle="modal" data-target="#modal_logout">注销账户</button> -->
+                <button id="btn_signout" class="btn btn-danger btn-modify" type="button">退出登录</button>
+                <button class="btn btn-primary btn-modify" type="button" data-toggle="modal"
+                    data-target="#modal_modify">修改信息</button>
             </div>
         </div>
     </div>
@@ -137,10 +143,6 @@
             </div>
         </div>
     </div>
-
-    <script src="scripts/xhr.js"></script>
-    <script src="scripts/helper.js"></script>
-    <script src="scripts/administrator.js"></script>
 </body>
 
 </html>

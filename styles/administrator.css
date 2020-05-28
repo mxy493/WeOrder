@@ -1,20 +1,22 @@
+.main-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .avatar-area {
-    height: 30vh;
+    margin-bottom: 30px;
 }
 
 #avatar {
-    display: block;
-    position: relative;
     max-width: 100px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    border: 1px solid;
 }
 
 .admin-info {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-family: sans-serif;
+    margin: 10px 0px;
     font-size: 16px;
     font-weight: 600;
 }
@@ -22,7 +24,7 @@
 .admin-attribute {
     display: inline-block;
     width: 4em;
-    
+
     text-align: justify;
     text-align-last: justify;
 }
@@ -33,7 +35,7 @@
 
 .btns-modify {
     display: flex;
-    margin-top: 15px;
+    margin-top: 20px;
     justify-content: center;
 }
 
