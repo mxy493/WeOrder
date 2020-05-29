@@ -1,3 +1,13 @@
+.container-fluid {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-fluid .row {
+    margin: 0px;
+    padding: 0px;
+}
+
 .img-thumbnail {
     width: 100px;
     height: 100px;
