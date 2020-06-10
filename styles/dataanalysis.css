@@ -1,9 +1,9 @@
 .right_area {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0px;
-    padding: 0px;
+    padding: 0px 20px 0px 20px;
     left: 0px;
     right: 0px;
 }
@@ -12,7 +12,7 @@
     margin: 20px 0px 20px 0px;
     padding: 0px;
     width: 600px;
-    height: 400px;
+    height: 360px;
 }
 
 .area1 {
@@ -25,6 +25,7 @@
 
 .area3 {
     /* background-color: crimson; */
+    width: 100%;
 }
 
 .area4 {
