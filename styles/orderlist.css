@@ -34,23 +34,36 @@
     font-family: sans-serif;
 }
 
+table {
+    /* table-layout:fixed; */
+    word-break:break-all;
+}
+
 table thead th {
     font-size: 16px;
     background-color: #b2ebf2;
 }
 
-table thead th:nth-child(5),th:last-child {
+table th:last-child,td:last-child {
+    width: 160px !important;
+}
+
+table th:nth-child(3),td:nth-child(3) {
+    width: 80px !important;
+}
+
+table th:nth-child(5),th:last-child {
     text-align: center;
 }
 
-table tbody td {
+table td {
     vertical-align: middle !important;
 }
 
-table tbody td:last-child {
+table td:last-child {
     text-align: center;
 }
 
-table tbody td p {
+table td p {
     margin: 0px;
 }
