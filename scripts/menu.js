@@ -24,8 +24,8 @@ $(document).ready(function(){
             $("#setprice").val(info[3].innerText);//单价
             $("#quantity").val(info[4].innerText);//库存
             $("#description").val(info[5].innerText);//描述
-            // $("#dish_status").val(info[6].innerText);//状态
-            if(info[6].children[0].alt == "已上架"){
+            //菜品状态
+            if($(info[6].children[0]).attr("style").indexOf("Lime") >= 0){
                 $("#status0").attr("class", "btn btn-success btn-status");
                 $("#status1").attr("class", "btn btn-default btn-status");
             }
