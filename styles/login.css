@@ -49,7 +49,7 @@ body {
 }
 
 .box {
-    background: url("http://imgbd.mxy493.xyz/20200515131553.jpg") no-repeat center center;
+    background: url("../login.jpg") no-repeat center center;
     background-size: cover;
 
     margin: 0 auto;
